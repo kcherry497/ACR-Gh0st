@@ -19,7 +19,7 @@ A stock TCL QD-Mini LED QM765QM7K (Google TV, Android 12) was running **31 TCL s
 
 The `BIService` (Business Intelligence) was **actively bound by the core TV app and Android TV Settings** with WACT flags, meaning the system would always restart it when killed. Even `am force-stop` couldn't keep it dead.
 
-Full technical report: [`docs/TCL_TV_Telemetry_Remediation_Report.docx`](docs/TCL_TV_Telemetry_Remediation_Report.docx)
+Full technical report: [`docs/TCL_TV_Telemetry_Remediation_Report.md`](docs/TCL_TV_Telemetry_Remediation_Report.md)
 
 > The report (March 2026) also describes an ESP32-S3 USB sinkhole. That approach was dropped: validation showed the firmware cannot present a USB network adapter on its framework, and a DNS blackhole with no uplink can't keep AirPlay or streaming working anyway.
 
@@ -123,7 +123,7 @@ ACR-Gh0st/
 ├── LICENSE                      # MIT
 ├── tcl_tv_remediate.sh          # ADB remediation script
 └── docs/
-    └── TCL_TV_Telemetry_Remediation_Report.docx
+    └── TCL_TV_Telemetry_Remediation_Report.md
 ```
 
 ---
