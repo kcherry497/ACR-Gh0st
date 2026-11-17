@@ -10,10 +10,10 @@ ACR-Gh0st eliminates Automatic Content Recognition (ACR), telemetry, usage track
 
 A stock TCL QD-Mini LED QM765QM7K (Google TV, Android 12) was running **31 TCL system packages** with the primary telemetry hub (`com.tcl.ttvs` / TTVSCore) operating as **UID 1000 (system user)** with permissions including:
 
-- **Screen capture every ~500ms** (ACR fingerprinting via Samba TV integration)
+- **Screen access** (`ACCESS_SURFACE_FLINGER`, granted) with Samba TV ACR built in (`tcl.permission.SambaVideoService`)
 - **Fine location, Bluetooth scanning, advertising ID**
 - **PACKAGE_USAGE_STATS** — knows every app you use and when
-- **FAKE_PACKAGE_SIGNATURE** — can impersonate other apps
+- **FAKE_PACKAGE_SIGNATURE** requested (not granted on this build) — asks to pass as other apps
 - **READ_LOGS** — reads system logs
 - Active outbound connections to **Google Cloud Platform on non-standard port 6178**
 
